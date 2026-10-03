@@ -1,59 +1,75 @@
+# Link Saver - Notion Vibrant Mobile Fixed (Wired) 🚀
 
-# Link Saver - Ultra Modern + GSheet
+Ultra-modern, high-contrast link saver and bookmark curation hub built with **Next.js 14**, **Tailwind CSS**, and **Google Sheets bi-directional sync**.
 
-Vibrant, premium link saver with Google Sheets sync, built with Next.js 14.
+Supported and powered by:
+- [Sudarshan AI](https://sudarshan-ai.com/) — Next-Gen Autonomous Enterprise AI Platform
+- [Vyapai Blogs](https://blogs.vyapai.in/) — Tech, Software Architecture & Business Insights
 
-## Features
-- Title, URL, Label, Dropdown Tag (blog/webpage/game/tool/video/design/inspiration/news/docs/article/portfolio/other)
-- Auto-updating date every second
-- AI auto-tag suggestions
-- Favicon wall + grid view
-- Command palette Cmd+K
-- Glassmorphism, aurora mesh, 60fps spring animations
-- Google Sheets sync via Apps Script
-- Offline-first localStorage + bulk actions + import/export
+---
 
-## Quick Start
+## ⚡ Features & Mobile Fixes
+- **Mobile Visibility & Contrast**: 1.5px contrast glossy borders on every element, 98% solid background (not translucent), 4.5:1 text contrast for high sunlight readability.
+- **Vibrant Design System**: Saturated violet/blue/emerald/amber/rose/fuchsia badges, glassmorphic aurora background, 60fps spring animations.
+- **Typography**: Plus Jakarta Sans 800 + Inter 700 with bold 18px card titles on mobile.
+- **4 Intuitive Views**:
+  - **Grid**: Bento-style interactive link cards
+  - **List**: Clean Notion-style row list
+  - **Gallery**: Visual cards with large gradient favicons
+  - **Table**: Full database spreadsheet view with selection checkboxes
+- **SEO-Optimised Footer & CTAs**:
+  - Semantic, accessible footer featuring high-converting CTAs for [Sudarshan AI](https://sudarshan-ai.com/) and [Vyapai Blogs](https://blogs.vyapai.in/).
+  - Rich OpenGraph and search engine indexing metadata.
+- **Auto Date Generation**: Live ticking clock in creation modal, relative timestamps on cards.
+- **Keyboard Shortcuts**:
+  - `N`: Create new link
+  - `/`: Focus search input
+  - `Cmd+K` or `Ctrl+K`: Toggle command palette
+  - `?`: Open shortcuts help
+  - `Esc`: Dismiss modals
+- **Google Sheets Sync**: Two-way sync to Google Sheets via Google Apps Script.
+
+---
+
+## 🛠️ Quick Start
+
 ```bash
 npm install
 npm run dev
 ```
 
-## Wire to your actual Google Sheet
-1. Create a Google Sheet with header: Title | URL | Label | Tag | Date | Favorite | ID | Favicon
-2. Extensions → Apps Script → paste code from `scripts/apps-script.js` → Save
-3. Deploy → New Deployment → Web App → Execute as You, Anyone can access → Copy URL
-4. Paste URL and Sheet ID into app via Connect Sheets button OR into .env:
-   - Copy `.env.example` to `.env.local`
-   - Set `NEXT_PUBLIC_APPS_SCRIPT_URL` and `NEXT_PUBLIC_SHEET_ID`
-5. The app will auto-sync on add/edit/delete
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-The wiring code is in `lib/sheets.ts` and used in `components/LinkSaver.tsx`.
+---
 
-## Deploy to Vercel
+## 📊 Wire to your Google Sheet
+- **Pre-configured Sheet ID**: `1h9dlyn8bzdIr9sq_TGfrarMMZVvSPPZ49zhxAGYM-JE`
+- **Spreadsheet URL**: [Open Google Sheet](https://docs.google.com/spreadsheets/d/1h9dlyn8bzdIr9sq_TGfrarMMZVvSPPZ49zhxAGYM-JE/edit)
+
+### Setup Steps:
+1. Open your Google Sheet.
+2. Go to **Extensions** → **Apps Script**.
+3. Replace existing script with code from [`scripts/apps-script.js`](./scripts/apps-script.js).
+4. Save and click **Deploy** → **New Deployment**.
+   - Type: **Web App**
+   - Execute as: **Me**
+   - Who has access: **Anyone**
+5. Copy the Web App URL and paste it into `.env.local` as `NEXT_PUBLIC_APPS_SCRIPT_URL` or use the in-app **Google Sheets Sync** modal.
+
+---
+
+## 🌐 SEO & Partner Links
+- **Sudarshan AI**: [https://sudarshan-ai.com/](https://sudarshan-ai.com/)
+- **Vyapai Blogs**: [https://blogs.vyapai.in/](https://blogs.vyapai.in/)
+
+---
+
+## 🚀 Deployment
+
+### Deploy on Vercel:
 ```bash
-vercel
+npx vercel --prod
 ```
 
-## Push to GitHub
-```bash
-git init
-git add .
-git commit -m "feat: ultra modern link saver with sheets"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/link-saver.git
-git push -u origin main
-```
-
-## GitHub Repo Update
-If you already have a repo, just copy this folder over and push. Or use GitHub CLI:
-```bash
-gh repo create link-saver --public --source=. --remote=origin --push
-```
-
-## Structure
-- app/page.tsx → main page
-- components/LinkSaver.tsx → 900+ lines premium component
-- lib/sheets.ts → GSheet wiring
-- scripts/apps-script.js → Apps Script backend
-- app/globals.css → aurora + glass styles
+### GitHub Repository:
+[https://github.com/sheevu/Links-saver-app.git](https://github.com/sheevu/Links-saver-app.git)

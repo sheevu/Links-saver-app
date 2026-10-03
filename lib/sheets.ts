@@ -20,6 +20,5 @@ export async function pullFromSheet(config: GSheetConfig){
   return json.data
 }
 
-// Pre-wired Sheet ID: 1h9dlyn8bzdIr9sq_TGfrarMMZVvSPPZ49zhxAGYM-JE
 export const DEFAULT_SHEET_ID = '1h9dlyn8bzdIr9sq_TGfrarMMZVvSPPZ49zhxAGYM-JE'
 export const DEFAULT_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1h9dlyn8bzdIr9sq_TGfrarMMZVvSPPZ49zhxAGYM-JE/edit'
